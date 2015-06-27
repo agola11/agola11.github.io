@@ -7,21 +7,6 @@
     <link rel="stylesheet" href="main.css">
     
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
-    <script type="text/javascript">
-        var jumboHeight = $('.jumbotron').outerHeight();
-        console.log(jumboHeight);
-        function parallax(){
-            var scrolled = $(window).scrollTop();
-            $('.bg').css('height', (jumboHeight-scrolled) + 'px');
-            console.log(scrolled)
-            console.log(jumboHeight-scrolled)
-        }
-
-        $(window).scroll(function(e){
-            parallax();
-        });
-    </script>
-    
 </head>
 
 <body>
@@ -103,6 +88,21 @@
         </div>
       </div>
     </div>
+
+    <script type="text/javascript">
+        var jumboHeight = $('.jumbotron').outerHeight();
+        console.log(jumboHeight);
+        function parallax(){
+            var scrolled = $(window).scrollTop();
+            $('.bg').css('height', (jumboHeight-scrolled) + 'px');
+            console.log(scrolled)
+            console.log(jumboHeight-scrolled)
+        }
+
+        $(window).scroll(function(e){
+            parallax();
+        });
+    </script>
 
 </body>
 </html>
