@@ -1,14 +1,4 @@
-.nav a {
-  color: #5a5a5a;
-  font-size: 11px;
-  font-weight: bold;
-  padding: 14px 10px;
-  text-transform: uppercase;
-}
 
-.nav li {
-  display: inline;
-}
 
 .bg {
   background: url('./background.jpg') no-repeat center center;
@@ -26,18 +16,6 @@
   color: white;
   text-shadow: #444 0 1px 1px;
   background:transparent;
-}
-
-.jumbotron h1 {
-  color: #fff;
-  font-size: 48px;  
-  font-family: 'Shift', sans-serif;
-  font-weight: bold;
-}
-
-.jumbotron p {
-  font-size: 20px;
-  color: #fff;
 }
 
 .learn-more {
