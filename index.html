@@ -13,6 +13,8 @@
         function parallax(){
             var scrolled = $(window).scrollTop();
             $('.bg').css('height', (jumboHeight-scrolled) + 'px');
+            console.log(scrolled)
+            console.log(jumboHeight-scrolled)
         }
 
         $(window).scroll(function(e){
