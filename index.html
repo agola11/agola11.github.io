@@ -9,8 +9,7 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
     <script type="text/javascript">
         var jumboHeight = $('.jumbotron').outerHeight();
-        Console.log(jumboHeight);
-        
+        console.log(jumboHeight);
         function parallax(){
             var scrolled = $(window).scrollTop();
             $('.bg').css('height', (jumboHeight-scrolled) + 'px');
