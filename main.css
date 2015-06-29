@@ -91,3 +91,7 @@ vertical-align:middle;
 .projects h4 {
   color:#00b0ff;
 }
+
+.projects project-info {
+  margin-top:15px;
+}
