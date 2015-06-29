@@ -68,6 +68,10 @@ vertical-align:middle;
     margin-bottom:13px;
 }
 
+.projects a {
+  color: #00b0ff;
+}
+
 .social {
     margin: 0;
     padding: 0;
