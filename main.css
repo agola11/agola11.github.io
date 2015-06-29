@@ -51,19 +51,19 @@ vertical-align:middle;
   color: #00b0ff;
 }
 
-.neighborhood-guides {
+.projects {
     background-color:#efefef;
     border-bottom:1px solid #dbdbdb;
 }
 
-.neighborhood-guides h2 {
+.projects h2 {
     color:#393c3d;
     font-size:24px;
   font-family: 'Shift', sans-serif;
   font-weight: bold;
 }
 
-.neighborhood-guides p {
+.projects p {
     font-size:15px;
     margin-bottom:13px;
 }
@@ -86,4 +86,8 @@ vertical-align:middle;
     margin: 5px;
     list-style: none outside none;
     display: inline-block;
+}
+
+.projects h4 {
+  color:#00b0ff;
 }
