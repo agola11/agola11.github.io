@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Bernice: A car controlled by a remote telepresence station.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+
+    <title>Bernice</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+
+          <h1 id="project_title">Bernice</h1>
+          <h2 id="project_tagline">A car controlled by a virtual reality station. Final project for <a href="https://registrar.princeton.edu/course-offerings/course_details.xml?courseid=002472&term=1104">ELE 302</a> at Princeton, taught by Andrew Houck and Antoine Kahn.</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h1>
+
+<p>We designed and implemented a telepresence station to control a (model) car. The
+station was mounted on a swivel chair and was equipped with a helmet which
+would track head orientation and provide visual feedback, an encoder that would
+transate swivel rotation into steering, and a handheld controller that would allow
+the user to control speed and provide haptic (vibrational) feedback. The
+station was powered by an Arduino Mega, which contained the software to
+connect and run all of our user-mounted sensors. The car was powered by a
+Cypress Programmable System on a Chip (PSoC). The car and chair communicated
+with eachother using a pair of XBee modules. The other main tools we
+used to implement this project were a 9DOF inertial measurement unit (IMU)
+for head tracking, accelerometer and vibration motor for haptic feedback, a
+pressure sensor for throttle control, rotary encoder for steering, a Raspberry Pi
+(with camera) for video streaming, and three servos for camera control.</p>
+
+
+
+<p>Unfortunately, I cannot post the code and final paper online since current ELE 302 students might see our implementation details. However, please feel free to email me if you would like to see the final paper/code!</p>
+
+<h2>
+<a id="people" class="anchor" href="#people" aria-hidden="true"><span class="octicon octicon-link"></span></a>People</h2>
+
+<p>Ankush Gola, Joseph Bolling</p>
+
+<h1>Media</h1>
+
+<h2>Video</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JVPNY8K5CBs" frameborder="0" allowfullscreen></iframe>
+
+<p>Sorry for sounding so dreary in the video, I must have been pretty tired at the time...</p>
+
+<h2>Pictures</h2>
+
+<img src="images/bern1.jpg" width="75%" height="75%">
+<img src="images/bern2.jpg" width="75%" height="75%">
+<img src="images/bern3.jpg" width="75%" height="75%">
+<img src="images/bern4.jpg" width="75%" height="75%">
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Inefishency maintained by <a href="https://github.com/agola11">agola11</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
