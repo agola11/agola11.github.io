@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Dubstep Laser Harp">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+
+    <title>piAngulate</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+
+          <h1 id="project_title">Dubstep Laser Harp</h1>
+          <h2 id="project_tagline">A harp that uses laser instead of strings as the interface. Plays dubstep at various frequencies based on hand position. First place at HackPrinceton Fall 2012. </h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Brief Overview</h1>
+
+<p>We used PVC pipes to house our electronics; this also acted as the "frame" for the harp.  We disassembled three laser pointer modules and mounted them on one side of the frame.  Each laser was directed at a photoresistor. We also mounted three IR distance sensors on the side of the frame opposite to the lasers. All of the sensors were connected to an Arduino Mega, which was controlled to a laptop computer via USB.  On the laptop, we stored various music files that were played based on the sensor readings sent from the Arduino.  We wrote a Processing script to handle this logic.</p>
+
+<p>When the user put his/her hand through a laser beam, it blocked the light from hitting the photoresistor, which subsequently triggered an interrupt on the Arduino.  Each laser corresponded to a different frequency of dubstep music. The reading from the IR sensor was to further vary frequency as well. The photoresistor number (either 1, 2, or 3) and the reading from the IR sensor was sent to the laptop.  These two numbers were combined to produce a hash that indexed into an array of music files.  The approriate file was then played. </p>
+
+<p>We built this project in 48 hours during HackPrinceton Fall 2012, where we won first place. Unfortunately we were all young and stupid at the time and didn't know how to use version control.  Hence, there isn't a git repository for our project.  Please feel free to email me for more details.</p>
+
+<img src="images/harp.jpg">
+
+<h2>People</h2>
+Ankush Gola, Joseph Bolling, Neil Chatterjee, Pranav Badami
+
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Inefishency maintained by <a href="https://github.com/agola11">agola11</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
