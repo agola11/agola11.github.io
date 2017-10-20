@@ -1,11 +1,10 @@
 .nav a {
   color: #5a5a5a;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: bold;
   padding: 14px 10px;
   text-transform: uppercase;
 }
-
 
 .nav li {
   display: inline;
@@ -33,7 +32,7 @@ vertical-align:middle;
 }
 
 .jumbotron p {
-  font-size: 18px;
+  font-size: 22px;
   color: #fff;
 }
 
@@ -58,13 +57,13 @@ vertical-align:middle;
 
 .projects h2 {
     color:#393c3d;
-    font-size:24px;
+    font-size:32px;
   font-family: 'Shift', sans-serif;
   font-weight: bold;
 }
 
 .projects p {
-    font-size:15px;
+    font-size:18px;
     margin-bottom:13px;
 }
 
@@ -93,5 +92,20 @@ vertical-align:middle;
 }
 
 .projects h4 {
+  font-size:20px;
   color:#00b0ff;
 }
+
+.projects img {
+    opacity: 1.0;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+}
+
+.projects img:hover {
+    filter: brightness(70%);
+    transition: opacity .55s ease-in-out;
+    -moz-transition: opacity .55s ease-in-out;
+    -webkit-transition: opacity .55s ease-in-out;
+}​
