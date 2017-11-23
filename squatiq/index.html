@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="SquatIQ: Sensor system designed to diagnose issues with squat form.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+
+    <title>Robot Kinection</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+         <header class="inner">
+          <a id="forkme_banner" href="https://github.com/agola11/SquatIQ">View on GitHub</a>
+
+          <h1 id="project_title">SquatIQ</h1>
+          <h2 id="project_tagline">A sensor system designed to diagnose issues with squat form.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/agola11/SquatIQ/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/agola11/SquatIQ/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h1>
+
+<p>As a society, we have rearranged our athletic priorities to favor performance over how well we move, often leading to injuries and limited athletic potential. Currently, the only way to obtain actionable, immediate feedback on movement technique is to perform a particular
+movement in front of an experienced physical therapist or coach – resources that are often expensive or unattainable to the average person.</p>
+
+<p>I wanted to explore using technology to help solve these types of projects so I started working on SquatIQ -- a sensor system designed to diagnose issues with squat form. I worked with the squat because it a compound movement that can give a lot of information on an individual's mobility and imbalances; many physical therapists actually screen patients by having them perform a bodyweight squat.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=4Zdr7u7bVw8" frameborder="0" allowfullscreen></iframe>
+
+<figure>
+  <img src="images/squatiq_setup.jpg" alt="Sensor System" width="400" height="300">
+  <figcaption>The sensor system consists of a quad-strapped accelerometer, pressure sensing insoles, and some signal conditioning circuitry. The sensors are connected to some signal conditioning circuitry and an Arduino, which commincates with the communicator running the live classifier.</figcaption>
+</figure>
+
+<br>
+<p>Currently, the system is consists of a shoe insole fitted with force-sensing resistors (FSRs) to determine foot pressure distribution, an accelerometer
+strapped on the athlete’s quad to obtain depth information, and a software program running a trained multi-label SVM classifier to diagnose real footing issues (supination, pronation, heel-lift, etc) from the raw sensor data (see above picture). The sensors are connected to some signal conditioning circuitry and an Arduino, which communicates with the computer running the classifier. The athlete first calibrates the system and then performs several bodyweight squats (see above for video, below for example report). The system outputs an accurate report containing footing errors and where in the movement they occur; I have tested it with several people in my gym.  It is possible to analyze data both online and offline.  Currently, I have only built one insole but will soon build another. All code is available on github, with <code>online_squat_classify_with_depth.py</code> being the main script. </p>
+
+<figure>
+  <img src="images/squat_plot.png" alt="Squat Plot">
+  <figcaption>A plot generated with data from SquatIQ, showing different errors throughout the movement.  The area of the circle indicates severity of the error.  This particular athlete exhibits pronation and heel-dominance during standing, and then starts to show heel-lift and slight pronation at the bottom of the squat.</figcaption>
+</figure>
+
+
+<h1>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future Work</h1>
+<h3>Diagnosing mobility issues</h3>
+<p>As mentioned earlier, the current output of the system is a report on footing issues during the squat and where in the movement they occur.  I am currently working with a physical therapist on using the output of my system to train a model that can infer general mobility issues and imbalances. For
+example, if a user exhibits heel-lift in the bottom position of a squat, it could indicate that they have limited ankle dorsiflexion due to tight calf muscles. I envision a future iteration of SquatIQ as a system that people can use to diagnose their own mobility issues with minimal interaction with a
+physical therapist.</p>
+
+<h3>Audial feedback</h3>
+<p>Ideally, the system would be able to deliver feedback to the user about how well they are performing the movement.  I think feedback in the form of musical cues is great for this application because it is easy for the brain to understand and many people already exercise to music.  I am currently trying to encode different errors as different notes in a chord and modulating the pitch to signal severity of the error.  When the user hears that a certain note in a chord is off, they should be able to intuitively correct for it.  I am playing with the <code>pyAudio</code> library for this and will post any updates.</p>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">SquatIQ maintained by <a href="https://github.com/agola11">agola11</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
